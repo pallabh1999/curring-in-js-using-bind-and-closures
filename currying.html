@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currying in html</title>
+</head>
+<body>
+    <h1>currying</h1>
+    <p>currying usind bind and closures</p>
+</body>
+<script>
+    //let  multiply = function(a,b)
+// {
+//   console.log(a*b);
+// }
+// // lets create another method which is exactly same as multiply and to do so we 
+// // use bind method.when  we call bind method it actually gives copy of multiply method
+// // and it doesnot invoke it directly this means this 2 will set as a
+
+
+// let  multiplyByTwo = multiply.bind(this,2)
+// // we will exceute this and the argument which we pass over here will refer to y
+// multiplyByTwo(5);
+// // so this is what function currying is 
+  
+
+// let  multiplyByThree = multiply.bind(this,3)
+// // we will exceute this and the argument which we pass over here will refer to y
+// multiplyByThree(5);
+// // so this is what function currying is 
+
+
+  // so the other way of function currying is by using closures.....
+  let multiply = function(x)
+  {
+    return function(y){
+    // so this function return another function  and inside that function we log the multiplication
+    //of x & y
+    console.log(x*y);
+    }
+  }
+  
+  let  multiplyByTwo = multiply(2)
+// we will exceute this and the argument which we pass over here will refer to y
+  multiplyByTwo(5);
+  // so we got the output as 10;
+  
+</script>
+</html>
